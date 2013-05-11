@@ -42,7 +42,7 @@ use Yii;
  * View:
  *
  * ~~~
- * foreach($models as $model) {
+ * foreach ($models as $model) {
  *     // display $model here
  * }
  *
@@ -73,14 +73,14 @@ class Pagination extends \yii\base\Object
 	 * @var boolean whether to always have the page parameter in the URL created by [[createUrl()]].
 	 * If false and [[page]] is 0, the page parameter will not be put in the URL.
 	 */
-	public $forcePageVar = false;
+	public $forcePageVar = true;
 	/**
 	 * @var string the route of the controller action for displaying the paged contents.
 	 * If not set, it means using the currently requested route.
 	 */
 	public $route;
 	/**
-	 * @var array parameters (name=>value) that should be used to obtain the current page number
+	 * @var array parameters (name => value) that should be used to obtain the current page number
 	 * and to create new pagination URLs. If not set, $_GET will be used instead.
 	 *
 	 * The array element indexed by [[pageVar]] is considered to be the current page number.

@@ -140,7 +140,7 @@ abstract class Cache extends Component implements \ArrayAccess
 	 * this method will try to simulate it.
 	 * @param array $keys list of keys identifying the cached values
 	 * @return array list of cached values corresponding to the specified keys. The array
-	 * is returned in terms of (key,value) pairs.
+	 * is returned in terms of (key, value) pairs.
 	 * If a value is not cached or expired, the corresponding array value will be false.
 	 */
 	public function mget($keys)
@@ -247,7 +247,7 @@ abstract class Cache extends Component implements \ArrayAccess
 	 * This method should be implemented by child classes to retrieve the data
 	 * from specific cache storage.
 	 * @param string $key a unique key identifying the cached value
-	 * @return string the value stored in cache, false if the value is not in the cache or expired.
+	 * @return string|boolean the value stored in cache, false if the value is not in the cache or expired.
 	 */
 	abstract protected function getValue($key);
 
